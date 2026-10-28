@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dota 2 Статистика</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="web/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <div class="brand"><span class="logo">D2</span><div><h1>Dota 2 Статистика</h1><small>и помощник пиков</small></div></div>
+  <form id="f">
+    <input id="q" type="text" placeholder="Steam ID, ссылка на профиль Steam или ник" autocomplete="off" aria-label="Steam аккаунт">
+    <button class="primary" type="submit">Показать</button>
+  </form>
+  <nav id="tabs">
+    <button type="button" data-tab="stats" class="on">Статистика</button>
+    <button type="button" data-tab="trends">Динамика</button>
+    <button type="button" data-tab="lasthit">Добивание</button>
+    <button type="button" data-tab="picks">Пики</button>
+    <button type="button" id="gear" class="iconbtn" aria-label="Настройки" title="Настройки">⚙</button>
+  </nav>
+</div></header>
+<main class="wrap">
+  <div id="stats"><div class="card welcome"><h2>Добро пожаловать</h2>Введи Steam ID, ссылку на профиль или ник и нажми «Показать».
+    <ul><li>Профиль, ранг, винрейт и все герои с подробной статистикой</li><li>Динамика формы, разбор по часам, дням и ролям</li><li>Добивание крипов: твой темп против эталона</li><li>Помощник пиков: кого брать против вражеских героев</li><li>Нужна включённая опция Dota 2 «Открыть публичные данные матчей» (Настройки → Опции → Социальные)</li></ul></div></div>
+  <div id="trends" hidden></div>
+  <div id="lasthit" hidden></div>
+  <div id="picks" hidden></div>
+</main>
+
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-label="Статистика матча"><div class="box"><button type="button" class="x" id="mclose" aria-label="Закрыть">✕</button><div id="mbody"></div></div></div>
+<div class="modal" id="settings" hidden role="dialog" aria-modal="true" aria-label="Настройки"><div class="box" style="max-width:560px"><button type="button" class="x" id="sclose" aria-label="Закрыть">✕</button><div id="sbody"></div></div></div>
+
+<script src="web/core.js"></script>
+<script src="web/api.js"></script>
+<script src="web/pickcore.js"></script>
+<script src="web/trendcore.js"></script>
+<script src="web/charts.js"></script>
+<script src="web/app.js"></script>
+<script src="web/stats.js"></script>
+<script src="web/match.js"></script>
+<script src="web/trends.js"></script>
+<script src="web/lasthit.js"></script>
+<script src="web/picks.js"></script>
+<script src="web/boot.js"></script>
+</body>
+</html>

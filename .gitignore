@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+node_modules/
+*.exe
+_backup/
+build/
+dist/
+.omc
